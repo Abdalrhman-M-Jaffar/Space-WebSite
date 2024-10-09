@@ -1,9 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow: hidden;
     background-color: wheat;
     width: 100%;
+    overflow: hidden;
 }
 
 .navbar{
@@ -22,7 +26,7 @@ body{
     z-index: 90;
 }
 
-.l1, .l2, .l3, .l4{
+#l1, #l2, #l3, #l4{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,49 +36,87 @@ body{
     z-index: 80;
 }
 
-.l1{
+#l1{
     background-color: red;
 }
 
-.l2{
+#l2{
     background-color: blue;
     margin-top: 100vh;
 }
 
-.l3{
+#l3{
     background-color: purple;
-    margin-top: 0vh;
-    transform: translateX(100%);
-}
-
-.l4{
-    background-color: black;
     transform: translateX(100%);
     margin-top: 100vh;
 }
 
+#l4{
+    background-color: black;
+    transform: translateX(100%);
+}
 
-/* @media (max-width: 800px) {
+
+@media (max-width: 800px) {
     
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body{
+    position: relative;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    overflow: hidden;
+    background-color: wheat;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-style{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background-color: aqua;
     position: fixed;
-    width: 50%;
-}
+    z-index: 99;
+}   
 
-.l1, .l2, .l3, .l4{
+#l1, #l2, #l3, #l4{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    position: absolute;
-    z-index: 80;
+    position: relative;
+    z-index: 98;
 }
 
-} */
+#l1{
+    background-color: red;
+}
+
+#l2{
+    background-color: blue;
+    margin-top: 0vh;
+}
+
+#l3{
+    background-color: purple;
+    transform: translateX(100%);
+    margin-top: -100vh;
+}
+
+#l4{
+    background-color: black;
+    transform: translateX(100%);
+    margin-top: -200vh;
+}
+
+}
